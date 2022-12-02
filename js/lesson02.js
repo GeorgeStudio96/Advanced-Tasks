@@ -1,7 +1,9 @@
 // ресурс https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 // русурс https://proglib.io/p/5-5-preobrazovanie-znacheniy-v-stroku-ili-chislo-v-javascript-2022-05-15
+// ресурс https://www.youtube.com/watch?v=fvO3JORn8Uc
 
 
+// файл изменен
 
 let num = 266219
 
@@ -21,9 +23,20 @@ console.log(newArr[2])
 
 // теперь решаем задачу, перемножим переменную num с каждым значением
 
+
+
 console.log((num * newArr[0])) // 266219 * 1 
 console.log((num * newArr[1])) // 266219 * 2 
 console.log((num * newArr[2])) // 266219 * 3
+
+// альтерантивный вариант с forEach 
+
+
+newArr.forEach(function (item, index) {
+    console.log('Альтерантинвый вариант с использованием forEach')
+    console.log(item * num)
+})
+
 
 
 console.log((num * newArr[0]) ** 3)
