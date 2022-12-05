@@ -1,12 +1,14 @@
-let num = 266219
+let arr = 266219
+let newArr = ('' + arr).split('').map(Number)
 
-let array = 123;
+let sum = newArr.reduce(function (prev, item, index) {
+    return prev * newArr[index]
+})
+console.log(sum)
 
-let newArr = ('' + array).split('').map(Number)
+const newSum = String(sum ** 3)
 
-let sumNewArr = newArr.map(item => item * num)
-console.log(sumNewArr)
-let newSum = sumNewArr.map(item => item ** 3)
 console.log(newSum)
-let newSumRes = newSum.map(item => String(item).slice(0, 2))
-console.log(newSumRes)
+
+let newResult = newSum.slice(0, 2)
+console.log(newResult)
