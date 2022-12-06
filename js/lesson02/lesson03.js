@@ -1,4 +1,4 @@
-let lang = 'efdef'
+let lang = 'ru'
 
 
 if (lang == 'ru') {
@@ -24,17 +24,12 @@ switch (lang) {
 }
 
 
-let langResult = lang === 'ru' ? console.log('Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресение') : console.log('Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday ')
+const fromIndexToKey = { 'ru': 0, 'en': 1 }
 
+const langArrIndex = fromIndexToKey[lang];
+const langArr = [['Пн', 'Вт'], ['Mn', 'Tu']];
 
-
-
-let langArr = [['lang', 'ru'], ['lang', 'en']]
-
-langArr[0].push('Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресение')
-langArr[1].push('Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday')
-
-console.log(langArr)
+console.log(langArr[langArrIndex])
 
 
 
