@@ -21,3 +21,5 @@ const weekFunc = function () {
 
 weekFunc()
 
+
+weekDiv.innerHTML = week
