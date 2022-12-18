@@ -26,3 +26,14 @@ console.log(resReduce);
 
 let resReduce2 = myReduce('', ['hello ', 'world', '!'], foo2)
 console.log(resReduce2);
+
+
+let arr = [1, 2, 3, 4]
+
+let map = arr.map(function (item) {
+    return item + ' str'
+
+})
+
+console.log(map);
+
