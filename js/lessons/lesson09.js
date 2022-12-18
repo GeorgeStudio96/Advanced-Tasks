@@ -60,7 +60,7 @@ function getAllTimes() {
 
         if (hours < 2 || hours === 21) {
             currentHourse = timeCorrect[0] // час
-        } else if (hours < 5 || (hours % 10 === 2) || (hours % 10 === 3)) {
+        } else if ((hours % 10 === 2) || (hours % 10 === 3) || (hours % 10 === 4)) {
             currentHourse = timeCorrect[1] // часа
         } else {
             currentHourse = timeCorrect[2] // часов
