@@ -1,22 +1,28 @@
 const input = document.querySelector('.input')
 const res = document.querySelector('.res')
 
+const debounce = (fn, ms) => {
+
+    let timeout;
+    return function () {
+        const fnCall = () => {
+            fn.apply(this, arguments)
+        }
+        clearTimeout(timeout);
+        timeout = setTimeout(fnCall, ms)
+    }
+}
+
+
+
+
 
 const setText = () => {
     res.innerHTML = input.value
 
 }
 
-input.addEventListener('keyup', debounce(setText, 300))
 
+const setTextDebounce = debounce(setText, 1000)
 
-
-
-
-function debounce(callback, delay) {
-    let timeout;
-    return function () {
-        clearTimeout(timeout);
-        timeout = setTimeout(callback, delay);
-    }
-}
+input.addEventListener('keyup', setTextDebounce)
